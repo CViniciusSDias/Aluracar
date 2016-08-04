@@ -1,0 +1,32 @@
+<ion-view>
+    <ion-nav-title>Quase lá</ion-nav-title>
+    <ion-content>
+        <form ng-submit="finalizarPedido()">
+        <div class="card">
+            <div class="item item-divider">
+                <h2>{{carro.nome}}</h2>
+            </div>
+            <div class="item item-text-wrap">
+                <div class="list">
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Nome</span>
+                        <input type="text" placeholder="Nome Completo" ng-model="pedido.nome" />
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Endereço</span>
+                        <input type="text" placeholder="Endereço" ng-model="pedido.endereco" />
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">E-mail</span>
+                        <input type="email" placeholder="E-mail" ng-model="pedido.email" />
+                    </label>
+                </div>
+            </div>
+            <div class="item item-divider">
+                {{carro.preco | currency:"R$"}}
+            </div>
+        </div>
+            <button type="submit" class="button button-full button-positive">Realizar um sonho</button>
+        </form>
+    </ion-content>
+</ion-view>
